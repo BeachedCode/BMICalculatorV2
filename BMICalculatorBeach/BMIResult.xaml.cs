@@ -1,12 +1,13 @@
+using System.Runtime.CompilerServices;
+
 namespace BMICalculatorBeach;
 
 public partial class BMIResult : ContentPage
 {
+    string recommendation;
     public BMIResult(double BMI, string gender)
     {
         InitializeComponent();
-        string recommendation;
-
         LblBMI.Text = "BMI = " + BMI.ToString();
 
         if (gender.Equals("Male"))
@@ -92,11 +93,11 @@ public partial class BMIResult : ContentPage
 
     private void GoBackClicked(object sender, EventArgs e)
     {
-
+        Navigation.PopToRootAsync();
     }
 
     private void RecommendationsClicked(object sender, EventArgs e)
     {
-
+        Navigation.PushAsync(new RecommendationPage(recommendation));
     }
 }

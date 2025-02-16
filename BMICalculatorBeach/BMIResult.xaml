@@ -33,13 +33,15 @@
             Text="Go Back"
             FontSize="15"
             Grid.Row="3"
-            Grid.Column="0"/>
+            Grid.Column="0"
+            Clicked="GoBackClicked"/>
         <Button
             VerticalOptions="End"
             HorizontalOptions="Fill"
             Text="Recommendations"
             FontSize="15"
             Grid.Row="3"
-            Grid.Column="1"/>
+            Grid.Column="1"
+            Clicked="RecommendationsClicked"/>
     </Grid>
 </ContentPage>
