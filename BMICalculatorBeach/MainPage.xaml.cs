@@ -31,7 +31,7 @@
 
             double BMI = Math.Round((weight * 703)/Math.Pow(height, 2),2);
 
-            Navigation.PushAsync(new BMIResult(BMI));
+            Navigation.PushAsync(new BMIResult(BMI, gender));
 
             /*if (gender.Equals("Male"))
             {

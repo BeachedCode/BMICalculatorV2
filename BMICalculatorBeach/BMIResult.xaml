@@ -3,26 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BMICalculatorBeach.BMIResult"
              Title="BMIResult">
-    <VerticalStackLayout
+    <Grid
         Margin="20"
-        Padding="20">
+        Padding="20"
+        RowDefinitions="Auto,Auto,*,*"
+        ColumnDefinitions="*,*"
+        ColumnSpacing="10">
         <Label 
             Text="BMI = 80"
-            FontSize="Large"
+            FontSize="60"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            x:Name="LblBMI"/>
         <Label
             Text="Overweight"
-            FontSize="Medium"
+            FontSize="32"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            />
-        
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            x:Name="LblClass"/>
         <Button
-            HorizontalOptions="Center"
             VerticalOptions="End"
+            HorizontalOptions="Fill"
+            Text="Go Back"
+            FontSize="15"
+            Grid.Row="3"
+            Grid.Column="0"/>
+        <Button
+            VerticalOptions="End"
+            HorizontalOptions="Fill"
             Text="Recommendations"
-            FontSize="Body"
-            />
-    </VerticalStackLayout>
+            FontSize="15"
+            Grid.Row="3"
+            Grid.Column="1"/>
+    </Grid>
 </ContentPage>
